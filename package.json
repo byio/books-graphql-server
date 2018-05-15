@@ -1,0 +1,11 @@
+{
+  "name": "books-graphql-server",
+  "version": "1.0.0",
+  "description": "graphql server of app that handles data on books",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "benyang",
+  "license": "ISC"
+}

@@ -14,16 +14,19 @@ let books = [
   {
     name: 'Slaughterhouse V',
     genre: 'War',
+    authorId: '1',
     id: '1'
   },
   {
     name: 'Watchmen',
     genre: 'Graphic Novel',
+    authorId: '2',
     id: '2'
   },
   {
     name: 'The 4-Hour Workweek',
     genre: 'Self-help',
+    authorId: '3',
     id: '3'
   }
 ];

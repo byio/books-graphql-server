@@ -79,7 +79,7 @@ const BookType = new GraphQLObjectType({
       type: AuthorType,
       resolve(parent, args) {
         // code to get data using property on parent object
-        return _.find(authors, { id: parent.authorId })
+        return _.find(authors, { id: parent.authorId });
       }
     }
   })
@@ -95,7 +95,7 @@ const AuthorType = new GraphQLObjectType({
       type: new GraphQLList(BookType),
       resolve(parent, args) {
         // code to get data using property on parent object
-        return _.filter(books, { authorId: parent.id })
+        return _.filter(books, { authorId: parent.id });
       }
     }
   })

@@ -28,6 +28,24 @@ let books = [
     genre: 'Self-help',
     authorId: '3',
     id: '3'
+  },
+  {
+    name: 'A Man Without A Country',
+    genre: 'Humor',
+    authorId: '1',
+    id: '4'
+  },
+  {
+    name: 'V For Vendetta',
+    genre: 'Dystopian Fiction',
+    authorId: '2',
+    id: '5'
+  },
+  {
+    name: 'Batman: The Killing Joke',
+    genre: 'Grpahic Novel',
+    authorId: '2',
+    id: '6'
   }
 ];
 

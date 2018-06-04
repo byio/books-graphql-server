@@ -13,63 +13,63 @@ const {
   GraphQLList
 } = graphql;
 
-// dummy data
-let books = [
-  {
-    name: 'Slaughterhouse V',
-    genre: 'War',
-    authorId: '1',
-    id: '1'
-  },
-  {
-    name: 'Watchmen',
-    genre: 'Graphic Novel',
-    authorId: '2',
-    id: '2'
-  },
-  {
-    name: 'The 4-Hour Workweek',
-    genre: 'Self-help',
-    authorId: '3',
-    id: '3'
-  },
-  {
-    name: 'A Man Without A Country',
-    genre: 'Humor',
-    authorId: '1',
-    id: '4'
-  },
-  {
-    name: 'V For Vendetta',
-    genre: 'Dystopian Fiction',
-    authorId: '2',
-    id: '5'
-  },
-  {
-    name: 'Batman: The Killing Joke',
-    genre: 'Grpahic Novel',
-    authorId: '2',
-    id: '6'
-  }
-];
-
-let authors = [
-  {
-    name: 'Kurt Vonnegut',
-    age: 84,
-    id: '1'
-  },
-  {
-    name: 'Alan Moore',
-    age: 64,
-    id: '2'
-  },
-  {
-    name: 'Tim Feriss',
-    age: 40,
-    id: '3'
-  }
-];
+// // dummy data
+// let books = [
+//   {
+//     name: 'Slaughterhouse V',
+//     genre: 'War',
+//     authorId: '1',
+//     id: '1'
+//   },
+//   {
+//     name: 'Watchmen',
+//     genre: 'Graphic Novel',
+//     authorId: '2',
+//     id: '2'
+//   },
+//   {
+//     name: 'The 4-Hour Workweek',
+//     genre: 'Self-help',
+//     authorId: '3',
+//     id: '3'
+//   },
+//   {
+//     name: 'A Man Without A Country',
+//     genre: 'Humor',
+//     authorId: '1',
+//     id: '4'
+//   },
+//   {
+//     name: 'V For Vendetta',
+//     genre: 'Dystopian Fiction',
+//     authorId: '2',
+//     id: '5'
+//   },
+//   {
+//     name: 'Batman: The Killing Joke',
+//     genre: 'Grpahic Novel',
+//     authorId: '2',
+//     id: '6'
+//   }
+// ];
+//
+// let authors = [
+//   {
+//     name: 'Kurt Vonnegut',
+//     age: 84,
+//     id: '1'
+//   },
+//   {
+//     name: 'Alan Moore',
+//     age: 64,
+//     id: '2'
+//   },
+//   {
+//     name: 'Tim Feriss',
+//     age: 40,
+//     id: '3'
+//   }
+// ];
 
 // define types
 const BookType = new GraphQLObjectType({
@@ -82,7 +82,7 @@ const BookType = new GraphQLObjectType({
       type: AuthorType,
       resolve(parent, args) {
         // code to get data using property on parent object
-        return _.find(authors, { id: parent.authorId });
+        // return _.find(authors, { id: parent.authorId });
       }
     }
   })
@@ -98,7 +98,7 @@ const AuthorType = new GraphQLObjectType({
       type: new GraphQLList(BookType),
       resolve(parent, args) {
         // code to get data using property on parent object
-        return _.filter(books, { authorId: parent.id });
+        // return _.filter(books, { authorId: parent.id });
       }
     }
   })
@@ -115,7 +115,7 @@ const RootQuery = new GraphQLObjectType({
       },
       resolve(parent, args) {
         // code to get data from db or other sources
-        return _.find(books, { id: args.id });
+        // return _.find(books, { id: args.id });
       }
     },
     author: {
@@ -125,19 +125,19 @@ const RootQuery = new GraphQLObjectType({
       },
       resolve(parent, args) {
         // code to get data from db or other sources
-        return _.find(authors, { id: args.id });
+        // return _.find(authors, { id: args.id });
       }
     },
     books: {
       type: new GraphQLList(BookType),
       resolve(parent, args) {
-        return books;
+        // return books;
       }
     },
     authors: {
       type: new GraphQLList(AuthorType),
       resolve(parent, args) {
-        return authors;
+        // return authors;
       }
     }
   }
